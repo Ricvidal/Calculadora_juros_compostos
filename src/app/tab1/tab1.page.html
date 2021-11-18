@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="primary">
     <ion-title> Calculadora de Juros Compostos</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,39 +7,43 @@
 <ion-content>
   <ion-card class="welcome-card">
     <ion-card-header>
-      <ion-card-subtitle><ion-icon name="bulb-outline"></ion-icon> Juros Compostos</ion-card-subtitle>
+      <ion-card-subtitle
+        ><ion-icon name="bulb-outline"></ion-icon> Juros
+        Compostos</ion-card-subtitle
+      >
       <ion-card-title>Fórmula</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>
-        M = C x (1+i)<sup>t</sup>
-      </p>
-        M = Montante fianl após a aplicação dos juros;<br/>
-        C = Capital;<br/>
-        i = Taxa de juros aplicada em %;<br/>
-        t = Tempo total.
-      
+      <p>M = C x (1+i)<sup>t</sup></p>
+      M = Montante final após a aplicação dos juros;<br />
+      C = Capital;<br />
+      i = Taxa de juros aplicada em %;<br />
+      t = Tempo total.
     </ion-card-content>
   </ion-card>
-  <ion-list lines="none">
+  <ion-list>
     <ion-list-header>
-      <ion-label> <ion-icon name="calculator-outline"></ion-icon> Calculadora</ion-label>
+      <ion-label>
+        <ion-icon name="calculator-outline"> </ion-icon> Calculadora</ion-label
+      >
     </ion-list-header>
-    <ion-item href="https://ionicframework.com/docs/">
-      <ion-icon slot="start" color="medium" name="book"></ion-icon>
-      <ion-label>Ionic Documentation</ion-label>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Principal</ion-label>
+      <ion-input></ion-input>
     </ion-item>
-    <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-      <ion-icon slot="start" color="medium" name="build"></ion-icon>
-      <ion-label>Scaffold Out Your App</ion-label>
+    <ion-item>
+      <ion-label position="floating" color="primary">Taxa</ion-label>
+      <ion-input></ion-input>
     </ion-item>
-    <ion-item href="https://ionicframework.com/docs/layout/structure">
-      <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-      <ion-label>Change Your App Layout</ion-label>
+    <ion-item>
+      <ion-label position="floating" color="primary">Pazo</ion-label>
+      <ion-input></ion-input>
     </ion-item>
-    <ion-item href="https://ionicframework.com/docs/theming/basics">
-      <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-      <ion-label>Theme Your App</ion-label>
-    </ion-item>
+    <ion-button>Calcular</ion-button>
+    <ion-item>
+    <ion-label color="tertiary">Resultado</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
   </ion-list>
 </ion-content>
