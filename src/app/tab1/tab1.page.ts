@@ -12,10 +12,10 @@ export class Tab1Page {
   prazo: number;
 
   constructor() {
-    this.resultado = 0;
-    this.principal = 10;
-    this.taxa = 1;
-    this.prazo = 1;
+    this.resultado;
+    this.principal;
+    this.taxa;
+    this.prazo;
   }
 
   calcular() {
