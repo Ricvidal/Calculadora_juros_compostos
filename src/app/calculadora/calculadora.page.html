@@ -1,0 +1,87 @@
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-icon name="business-outline"></ion-icon> Juros Compostos
+      APP</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle
+        ><ion-icon name="bulb-outline"></ion-icon> Juros
+        Compostos</ion-card-subtitle
+      >
+      <ion-card-title>Fórmula</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>M = C x (1+i)<sup>t</sup></p>
+      M = Montante final após a aplicação dos juros;<br />
+      C = Capital (principal);<br />
+      i = Taxa de juros aplicada em %;<br />
+      t = Tempo total (prazo).
+      <br />
+      <a href="https://matematicabasica.net/juros-compostos/">Saiba mais</a>
+    </ion-card-content>
+  </ion-card>
+  <form [formGroup]="formGroup">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          <ion-icon name="calculator-outline"> </ion-icon>
+          Calculadora</ion-label
+        >
+      </ion-list-header>
+      <ion-item>
+        <ion-label position="floating" color="primary"
+          ><ion-icon name="cash-outline"></ion-icon> Principal</ion-label
+        >
+        <ion-input
+          type="number"
+          [(ngModel)]="principal"
+          formControlName="principalControl"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="primary">Taxa %</ion-label>
+        <ion-input
+          type="number"
+          [(ngModel)]="taxa"
+          formControlName="taxaControl"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="primary"
+          ><ion-icon name="calendar-outline"></ion-icon> Pazo</ion-label
+        >
+        <ion-input
+          type="number"
+          [(ngModel)]="prazo"
+          formControlName="prazoControl"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="calcular()" [disabled]="!formGroup.valid"
+          >Calcular</ion-button
+        >
+      </ion-item>
+      <!-- <ion-item color="medium">
+      <ion-label color="tertiary" slot="start">Resultado </ion-label
+      ><ion-input type="number" color="dark">{{resultado}}</ion-input>
+    </ion-item> -->
+      <ion-card>
+        <ion-item>
+          <ion-label color="tertiary">Resultado </ion-label>
+          {{resultado}}
+        </ion-item>
+      </ion-card>
+    </ion-list>
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="success">
+    <ion-title>IFRN-PAR :: TSI6</ion-title>
+  </ion-toolbar>
+</ion-footer>
