@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title> <ion-icon name="business-outline"></ion-icon> Calculadora de Juros Compostos</ion-title>
+    <ion-title>
+      <ion-icon name="business-outline"></ion-icon> Calculadora de Juros
+      Compostos</ion-title
+    >
   </ion-toolbar>
 </ion-header>
 
@@ -31,7 +34,9 @@
     </ion-list-header>
 
     <ion-item>
-      <ion-label position="floating" color="primary"><ion-icon name="cash-outline"></ion-icon> Principal</ion-label>
+      <ion-label position="floating" color="primary"
+        ><ion-icon name="cash-outline"></ion-icon> Principal</ion-label
+      >
       <ion-input type="number" [(ngModel)]="principal"></ion-input>
     </ion-item>
     <ion-item>
@@ -39,13 +44,24 @@
       <ion-input type="number" [(ngModel)]="taxa"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating" color="primary"><ion-icon name="calendar-outline"></ion-icon> Pazo</ion-label>
+      <ion-label position="floating" color="primary"
+        ><ion-icon name="calendar-outline"></ion-icon> Pazo</ion-label
+      >
       <ion-input type="number" [(ngModel)]="prazo"></ion-input>
     </ion-item>
-    <ion-button (click)="calcular()">Calcular</ion-button>
     <ion-item>
-      <ion-label color="tertiary">Resultado {{resultado}}</ion-label>
+      <ion-button (click)="calcular()">Calcular</ion-button>
     </ion-item>
+    <!-- <ion-item color="medium">
+      <ion-label color="tertiary" slot="start">Resultado </ion-label
+      ><ion-input type="number" color="dark">{{resultado}}</ion-input>
+    </ion-item> -->
+    <ion-card>
+      <ion-item> 
+        <ion-label color="tertiary">Resultado </ion-label>
+        {{resultado}}
+      </ion-item>
+    </ion-card>
   </ion-list>
 </ion-content>
 <ion-footer>
