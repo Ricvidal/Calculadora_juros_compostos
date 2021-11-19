@@ -16,9 +16,11 @@
     <ion-card-content>
       <p>M = C x (1+i)<sup>t</sup></p>
       M = Montante final após a aplicação dos juros;<br />
-      C = Capital;<br />
+      C = Capital (principal);<br />
       i = Taxa de juros aplicada em %;<br />
-      t = Tempo total.
+      t = Tempo total (prazo).
+      <br />
+      <a href="https://matematicabasica.net/juros-compostos/">Saiba mais</a>
     </ion-card-content>
   </ion-card>
   <ion-list>
@@ -30,20 +32,24 @@
 
     <ion-item>
       <ion-label position="floating" color="primary">Principal</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="principal"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating" color="primary">Taxa</ion-label>
-      <ion-input></ion-input>
+      <ion-label position="floating" color="primary">Taxa %</ion-label>
+      <ion-input [(ngModel)]="taxa"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" color="primary">Pazo</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="prazo"></ion-input>
     </ion-item>
-    <ion-button>Calcular</ion-button>
+    <ion-button (click)="calcular()">Calcular</ion-button>
     <ion-item>
-    <ion-label color="tertiary">Resultado</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+      <ion-label color="tertiary">Resultado = {{resultado}}</ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>IFRN-PAR :: TSI6</ion-title>
+  </ion-toolbar>
+</ion-footer>
