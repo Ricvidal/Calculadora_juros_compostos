@@ -19,8 +19,10 @@ export class Tab1Page {
   }
 
   calcular() {
-     this.resultado =
-      this.principal * Math.pow(1 + this.taxa / 100, this.prazo);
-    return parseFloat(this.resultado.toFixed(2));
+    let resultadoFixed=0; 
+    resultadoFixed =
+    this.principal * Math.pow(1 + this.taxa / 100, this.prazo);
+    this.resultado = parseFloat(resultadoFixed.toFixed(2));
+    return this.resultado;
   }
 }
